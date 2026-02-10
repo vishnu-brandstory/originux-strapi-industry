@@ -1,0 +1,378 @@
+{
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "@strapi/admin": {
+      "name": "@strapi/admin",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "axios"
+      ],
+      "effects": [
+        "@strapi/content-manager",
+        "@strapi/content-releases",
+        "@strapi/content-type-builder",
+        "@strapi/core",
+        "@strapi/email",
+        "@strapi/i18n",
+        "@strapi/plugin-cloud",
+        "@strapi/review-workflows",
+        "@strapi/strapi",
+        "@strapi/upload"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/@strapi/admin"
+      ],
+      "fixAvailable": {
+        "name": "@strapi/strapi",
+        "version": "4.24.5",
+        "isSemVerMajor": true
+      }
+    },
+    "@strapi/cloud-cli": {
+      "name": "@strapi/cloud-cli",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "axios"
+      ],
+      "effects": [
+        "@strapi/strapi"
+      ],
+      "range": "<=0.0.0-next.ffc36acb308febe288f1a31b62cbbb75b286585c || >=4.24.5",
+      "nodes": [
+        "node_modules/@strapi/cloud-cli"
+      ],
+      "fixAvailable": {
+        "name": "@strapi/strapi",
+        "version": "4.24.5",
+        "isSemVerMajor": true
+      }
+    },
+    "@strapi/content-manager": {
+      "name": "@strapi/content-manager",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@strapi/admin"
+      ],
+      "effects": [
+        "@strapi/content-releases",
+        "@strapi/review-workflows",
+        "@strapi/strapi"
+      ],
+      "range": "<=0.0.0-next.ffc36acb308febe288f1a31b62cbbb75b286585c || >=5.0.0-beta.6",
+      "nodes": [
+        "node_modules/@strapi/content-manager"
+      ],
+      "fixAvailable": {
+        "name": "@strapi/strapi",
+        "version": "4.24.5",
+        "isSemVerMajor": true
+      }
+    },
+    "@strapi/content-releases": {
+      "name": "@strapi/content-releases",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@strapi/admin",
+        "@strapi/content-manager"
+      ],
+      "effects": [
+        "@strapi/strapi"
+      ],
+      "range": "<=0.0.0-next.ffc36acb308febe288f1a31b62cbbb75b286585c || >=4.18.1-beta.0",
+      "nodes": [
+        "node_modules/@strapi/content-releases"
+      ],
+      "fixAvailable": {
+        "name": "@strapi/strapi",
+        "version": "4.24.5",
+        "isSemVerMajor": true
+      }
+    },
+    "@strapi/content-type-builder": {
+      "name": "@strapi/content-type-builder",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@strapi/admin"
+      ],
+      "effects": [],
+      "range": "<=0.0.0-next.ffc36acb308febe288f1a31b62cbbb75b286585c || >=5.0.0-beta.6",
+      "nodes": [
+        "node_modules/@strapi/content-type-builder"
+      ],
+      "fixAvailable": true
+    },
+    "@strapi/core": {
+      "name": "@strapi/core",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@strapi/admin"
+      ],
+      "effects": [],
+      "range": "*",
+      "nodes": [
+        "node_modules/@strapi/core"
+      ],
+      "fixAvailable": true
+    },
+    "@strapi/email": {
+      "name": "@strapi/email",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@strapi/admin"
+      ],
+      "effects": [],
+      "range": "<=0.0.0-next.ffc36acb308febe288f1a31b62cbbb75b286585c || >=5.0.0-beta.6",
+      "nodes": [
+        "node_modules/@strapi/email"
+      ],
+      "fixAvailable": true
+    },
+    "@strapi/i18n": {
+      "name": "@strapi/i18n",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@strapi/admin",
+        "@strapi/content-manager"
+      ],
+      "effects": [],
+      "range": "<=0.0.0-next.ffc36acb308febe288f1a31b62cbbb75b286585c || >=5.0.0-beta.6",
+      "nodes": [
+        "node_modules/@strapi/i18n"
+      ],
+      "fixAvailable": true
+    },
+    "@strapi/plugin-cloud": {
+      "name": "@strapi/plugin-cloud",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@strapi/admin",
+        "@strapi/strapi"
+      ],
+      "effects": [],
+      "range": "<=0.0.0-next.ffc36acb308febe288f1a31b62cbbb75b286585c || 5.0.0-alpha.0 - 5.0.0-alpha.7 || >=5.4.0",
+      "nodes": [
+        "node_modules/@strapi/plugin-cloud"
+      ],
+      "fixAvailable": true
+    },
+    "@strapi/plugin-users-permissions": {
+      "name": "@strapi/plugin-users-permissions",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@strapi/strapi",
+        "grant",
+        "jwk-to-pem"
+      ],
+      "effects": [],
+      "range": "<=0.0.0-next.ffc36acb308febe288f1a31b62cbbb75b286585c || >=4.6.0-alpha.0",
+      "nodes": [
+        "node_modules/@strapi/plugin-users-permissions"
+      ],
+      "fixAvailable": {
+        "name": "@strapi/plugin-users-permissions",
+        "version": "4.5.6",
+        "isSemVerMajor": true
+      }
+    },
+    "@strapi/review-workflows": {
+      "name": "@strapi/review-workflows",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@strapi/admin",
+        "@strapi/content-manager"
+      ],
+      "effects": [],
+      "range": "*",
+      "nodes": [
+        "node_modules/@strapi/review-workflows"
+      ],
+      "fixAvailable": true
+    },
+    "@strapi/strapi": {
+      "name": "@strapi/strapi",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@strapi/admin",
+        "@strapi/cloud-cli",
+        "@strapi/content-manager",
+        "@strapi/content-releases",
+        "@strapi/content-type-builder",
+        "@strapi/core",
+        "@strapi/email",
+        "@strapi/i18n",
+        "@strapi/review-workflows",
+        "@strapi/upload"
+      ],
+      "effects": [
+        "@strapi/plugin-cloud",
+        "@strapi/plugin-users-permissions"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/@strapi/strapi"
+      ],
+      "fixAvailable": {
+        "name": "@strapi/strapi",
+        "version": "4.24.5",
+        "isSemVerMajor": true
+      }
+    },
+    "@strapi/upload": {
+      "name": "@strapi/upload",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@strapi/admin"
+      ],
+      "effects": [],
+      "range": "<=0.0.0-next.ffc36acb308febe288f1a31b62cbbb75b286585c || >=5.0.0-beta.6",
+      "nodes": [
+        "node_modules/@strapi/upload"
+      ],
+      "fixAvailable": true
+    },
+    "axios": {
+      "name": "axios",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1113092,
+          "name": "axios",
+          "dependency": "axios",
+          "title": "Axios is Vulnerable to Denial of Service via __proto__ Key in mergeConfig",
+          "url": "https://github.com/advisories/GHSA-43fc-jf86-j433",
+          "severity": "high",
+          "cwe": [
+            "CWE-754"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": "<=1.13.4"
+        }
+      ],
+      "effects": [
+        "@strapi/admin",
+        "@strapi/cloud-cli"
+      ],
+      "range": "<=1.13.4",
+      "nodes": [
+        "node_modules/axios"
+      ],
+      "fixAvailable": {
+        "name": "@strapi/strapi",
+        "version": "4.24.5",
+        "isSemVerMajor": true
+      }
+    },
+    "elliptic": {
+      "name": "elliptic",
+      "severity": "low",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1112030,
+          "name": "elliptic",
+          "dependency": "elliptic",
+          "title": "Elliptic Uses a Cryptographic Primitive with a Risky Implementation",
+          "url": "https://github.com/advisories/GHSA-848j-6mx2-7j84",
+          "severity": "low",
+          "cwe": [
+            "CWE-1240"
+          ],
+          "cvss": {
+            "score": 5.6,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L"
+          },
+          "range": "<=6.6.1"
+        }
+      ],
+      "effects": [
+        "jwk-to-pem"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/elliptic"
+      ],
+      "fixAvailable": {
+        "name": "@strapi/plugin-users-permissions",
+        "version": "4.5.6",
+        "isSemVerMajor": true
+      }
+    },
+    "grant": {
+      "name": "grant",
+      "severity": "low",
+      "isDirect": false,
+      "via": [
+        "jwk-to-pem"
+      ],
+      "effects": [
+        "@strapi/plugin-users-permissions"
+      ],
+      "range": ">=5.1.0",
+      "nodes": [
+        "node_modules/grant"
+      ],
+      "fixAvailable": {
+        "name": "@strapi/plugin-users-permissions",
+        "version": "4.5.6",
+        "isSemVerMajor": true
+      }
+    },
+    "jwk-to-pem": {
+      "name": "jwk-to-pem",
+      "severity": "low",
+      "isDirect": false,
+      "via": [
+        "elliptic"
+      ],
+      "effects": [
+        "@strapi/plugin-users-permissions",
+        "grant"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/jwk-to-pem"
+      ],
+      "fixAvailable": {
+        "name": "@strapi/plugin-users-permissions",
+        "version": "4.5.6",
+        "isSemVerMajor": true
+      }
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 3,
+      "moderate": 0,
+      "high": 14,
+      "critical": 0,
+      "total": 17
+    },
+    "dependencies": {
+      "prod": 1433,
+      "dev": 0,
+      "optional": 85,
+      "peer": 2,
+      "peerOptional": 0,
+      "total": 1519
+    }
+  }
+}

@@ -15,16 +15,15 @@
     "upgrade:dry": "npx @strapi/upgrade latest --dry"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.32.0",
-    "@strapi/plugin-users-permissions": "5.32.0",
-    "@strapi/strapi": "5.32.0",
+    "@strapi/plugin-cloud": "^5.9.0",
+    "@strapi/plugin-users-permissions": "^5.9.0",
+    "@strapi/strapi": "^5.35.0",
     "better-sqlite3": "12.4.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
     "styled-components": "^6.0.0"
   },
-  "devDependencies": {},
   "engines": {
     "node": ">=20.0.0 <=24.x.x",
     "npm": ">=6.0.0"
@@ -32,5 +31,17 @@
   "strapi": {
     "uuid": "5110f247-e5b9-4aa2-b993-8f1ab425de14",
     "installId": "bb01b95524e7c5fe281991815d6b83ee281bb8d940971f17754eabb23796d5b6"
+  },
+  "overrides": {
+    "elliptic": "^6.6.1",
+    "tmp": "^0.2.3",
+    "inquirer": "^9.3.7",
+    "tar": "^7.5.7",
+    "lodash": "^4.17.21",
+    "vite": "^5.4.16",
+    "jwk-to-pem": "^2.0.7",
+    "esbuild": "^0.25.0",
+    "@vitejs/plugin-react-swc": "^3.7.2",
+    "axios": "^1.13.5"
   }
 }
