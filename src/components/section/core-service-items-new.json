@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_section_core_service_items_news",
+  "info": {
+    "displayName": "core_service_items_new"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "url": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

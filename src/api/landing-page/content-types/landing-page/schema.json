@@ -14,6 +14,9 @@
     "title": {
       "type": "string"
     },
+    "seo_title": {
+      "type": "string"
+    },
     "seo_description": {
       "type": "string"
     },
@@ -22,9 +25,6 @@
       "targetField": "title"
     },
     "hero_heading": {
-      "type": "text"
-    },
-    "hero_description": {
       "type": "text"
     },
     "hero_image": {
@@ -37,8 +37,8 @@
         "audios"
       ]
     },
-    "seo_title": {
-      "type": "string"
+    "hero_description": {
+      "type": "blocks"
     },
     "stat1_value": {
       "type": "integer"
@@ -74,7 +74,7 @@
       "type": "string"
     },
     "approach_content": {
-      "type": "text"
+      "type": "blocks"
     },
     "cta_enable": {
       "type": "boolean"
@@ -113,7 +113,7 @@
     },
     "core_service_items": {
       "type": "component",
-      "component": "section.core-service-item",
+      "component": "section.core-service-items-new",
       "repeatable": true
     },
     "journey_heading": {
@@ -129,7 +129,7 @@
     },
     "solution_details": {
       "type": "component",
-      "component": "section.solution-details",
+      "component": "section.solution-details-test",
       "repeatable": true
     },
     "experience_studio_heading": {
@@ -143,9 +143,6 @@
     "why_partner_heading": {
       "type": "string"
     },
-    "why_partner_content": {
-      "type": "text"
-    },
     "why_partner_image": {
       "type": "media",
       "multiple": false,
@@ -155,6 +152,9 @@
         "videos",
         "audios"
       ]
+    },
+    "why_partner_content": {
+      "type": "blocks"
     },
     "advantageHeading": {
       "type": "string"
@@ -172,13 +172,13 @@
       "component": "section.toolkit-items",
       "repeatable": true
     },
+    "faq_heading": {
+      "type": "string"
+    },
     "faq_item": {
       "type": "component",
       "component": "section.faq-item",
       "repeatable": true
-    },
-    "faq_heading": {
-      "type": "string"
     }
   }
 }

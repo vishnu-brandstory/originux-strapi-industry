@@ -1,17 +1,11 @@
 {
-  "collectionName": "components_section_toolkit_items",
+  "collectionName": "components_section_solution_details_test_s",
   "info": {
-    "displayName": "toolkit_items"
+    "displayName": "solution_details_test "
   },
   "options": {},
   "attributes": {
-    "title": {
-      "type": "string"
-    },
-    "description": {
-      "type": "text"
-    },
-    "toolkit_icons": {
+    "num_img": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
@@ -21,8 +15,11 @@
         "audios"
       ]
     },
-    "url": {
+    "title": {
       "type": "string"
+    },
+    "description": {
+      "type": "blocks"
     }
   },
   "config": {}

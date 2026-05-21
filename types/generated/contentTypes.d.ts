@@ -453,12 +453,12 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
   attributes: {
     advantage_item: Schema.Attribute.Component<'section.advantage-item', true>;
     advantageHeading: Schema.Attribute.String;
-    approach_content: Schema.Attribute.Text;
+    approach_content: Schema.Attribute.Blocks;
     approach_heading: Schema.Attribute.String;
     approach_label: Schema.Attribute.String;
     core_service_heading: Schema.Attribute.String;
     core_service_items: Schema.Attribute.Component<
-      'section.core-service-item',
+      'section.core-service-items-new',
       true
     >;
     core_service_para: Schema.Attribute.Text;
@@ -481,7 +481,7 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
     >;
     faq_heading: Schema.Attribute.String;
     faq_item: Schema.Attribute.Component<'section.faq-item', true>;
-    hero_description: Schema.Attribute.Text;
+    hero_description: Schema.Attribute.Blocks;
     hero_heading: Schema.Attribute.Text;
     hero_image: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
@@ -501,7 +501,7 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
     slug: Schema.Attribute.UID<'title'>;
     solution_detail_heading: Schema.Attribute.String;
     solution_details: Schema.Attribute.Component<
-      'section.solution-details',
+      'section.solution-details-test',
       true
     >;
     stat1_label: Schema.Attribute.Text;
@@ -519,7 +519,7 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    why_partner_content: Schema.Attribute.Text;
+    why_partner_content: Schema.Attribute.Blocks;
     why_partner_heading: Schema.Attribute.String;
     why_partner_image: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
