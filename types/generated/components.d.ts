@@ -11,6 +11,62 @@ export interface SectionAdvantageItem extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionApproach extends Struct.ComponentSchema {
+  collectionName: 'components_section_approaches';
+  info: {
+    displayName: 'approach';
+  };
+  attributes: {
+    description: Schema.Attribute.Blocks;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionBanner extends Struct.ComponentSchema {
+  collectionName: 'components_section_banners';
+  info: {
+    displayName: 'banner';
+  };
+  attributes: {
+    description: Schema.Attribute.Blocks;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionBenefits extends Struct.ComponentSchema {
+  collectionName: 'components_section_benefits';
+  info: {
+    displayName: 'Benefits';
+  };
+  attributes: {
+    benefits_cards: Schema.Attribute.Component<'section.benefits-cards', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionBenefitsCards extends Struct.ComponentSchema {
+  collectionName: 'components_section_benefits_cards';
+  info: {
+    displayName: 'benefits cards';
+  };
+  attributes: {
+    description: Schema.Attribute.Blocks;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionCards extends Struct.ComponentSchema {
+  collectionName: 'components_section_cards';
+  info: {
+    displayName: 'cards';
+  };
+  attributes: {
+    description: Schema.Attribute.Blocks;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SectionCoreServiceItem extends Struct.ComponentSchema {
   collectionName: 'components_section_core_service_items';
   info: {
@@ -31,6 +87,19 @@ export interface SectionCoreServiceItemsNew extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     title: Schema.Attribute.String;
     url: Schema.Attribute.String;
+  };
+}
+
+export interface SectionCta extends Struct.ComponentSchema {
+  collectionName: 'components_section_cta_s';
+  info: {
+    displayName: 'cta ';
+  };
+  attributes: {
+    button_text: Schema.Attribute.String;
+    button_url: Schema.Attribute.String;
+    paragraph: Schema.Attribute.Blocks;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -57,6 +126,26 @@ export interface SectionExperienceStudioItem extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionFaq extends Struct.ComponentSchema {
+  collectionName: 'components_section_faqs';
+  info: {
+    displayName: 'faq';
+  };
+  attributes: {};
+}
+
+export interface SectionFaqContent extends Struct.ComponentSchema {
+  collectionName: 'components_section_faq_contents';
+  info: {
+    displayName: 'faq content';
+  };
+  attributes: {
+    active: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    answer: Schema.Attribute.Blocks;
+    question: Schema.Attribute.String;
+  };
+}
+
 export interface SectionFaqItem extends Struct.ComponentSchema {
   collectionName: 'components_section_faq_items';
   info: {
@@ -69,6 +158,36 @@ export interface SectionFaqItem extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionFaqsItems extends Struct.ComponentSchema {
+  collectionName: 'components_section_faqs_items';
+  info: {
+    displayName: 'faqs items';
+  };
+  attributes: {
+    faq_content: Schema.Attribute.Component<'section.faq-content', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionFaqsTems extends Struct.ComponentSchema {
+  collectionName: 'components_section_faqs_tems';
+  info: {
+    displayName: 'faqs-tems';
+  };
+  attributes: {};
+}
+
+export interface SectionFrequentlyAskedQuestions
+  extends Struct.ComponentSchema {
+  collectionName: 'components_section_frequently_asked_questions';
+  info: {
+    displayName: 'Frequently Asked Questions';
+  };
+  attributes: {
+    faqs_items: Schema.Attribute.Component<'section.faqs-tems', false>;
+  };
+}
+
 export interface SectionJourneyItems extends Struct.ComponentSchema {
   collectionName: 'components_section_journey_items';
   info: {
@@ -76,6 +195,40 @@ export interface SectionJourneyItems extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionOurApproach extends Struct.ComponentSchema {
+  collectionName: 'components_section_our_approaches';
+  info: {
+    displayName: 'our-approach';
+  };
+  attributes: {
+    approach: Schema.Attribute.Component<'section.approach', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionSeo extends Struct.ComponentSchema {
+  collectionName: 'components_section_seos';
+  info: {
+    displayName: 'seo';
+  };
+  attributes: {
+    seo_description: Schema.Attribute.String;
+    seo_title: Schema.Attribute.String;
+    slug: Schema.Attribute.String;
+  };
+}
+
+export interface SectionServices extends Struct.ComponentSchema {
+  collectionName: 'components_section_services';
+  info: {
+    displayName: 'Services';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'section.cards', true>;
     title: Schema.Attribute.String;
   };
 }
@@ -127,20 +280,59 @@ export interface SectionToolkitItems extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionWhy extends Struct.ComponentSchema {
+  collectionName: 'components_section_whies';
+  info: {
+    displayName: 'Why';
+  };
+  attributes: {
+    description: Schema.Attribute.Blocks;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionWhyContent extends Struct.ComponentSchema {
+  collectionName: 'components_section_why_contents';
+  info: {
+    displayName: 'Why content';
+  };
+  attributes: {
+    description: Schema.Attribute.Blocks;
+    title: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'section.advantage-item': SectionAdvantageItem;
+      'section.approach': SectionApproach;
+      'section.banner': SectionBanner;
+      'section.benefits': SectionBenefits;
+      'section.benefits-cards': SectionBenefitsCards;
+      'section.cards': SectionCards;
       'section.core-service-item': SectionCoreServiceItem;
       'section.core-service-items-new': SectionCoreServiceItemsNew;
+      'section.cta': SectionCta;
       'section.empower-item': SectionEmpowerItem;
       'section.experience-studio-item': SectionExperienceStudioItem;
+      'section.faq': SectionFaq;
+      'section.faq-content': SectionFaqContent;
       'section.faq-item': SectionFaqItem;
+      'section.faqs-items': SectionFaqsItems;
+      'section.faqs-tems': SectionFaqsTems;
+      'section.frequently-asked-questions': SectionFrequentlyAskedQuestions;
       'section.journey-items': SectionJourneyItems;
+      'section.our-approach': SectionOurApproach;
+      'section.seo': SectionSeo;
+      'section.services': SectionServices;
       'section.solution-details': SectionSolutionDetails;
       'section.solution-details-new': SectionSolutionDetailsNew;
       'section.solution-details-test': SectionSolutionDetailsTest;
       'section.toolkit-items': SectionToolkitItems;
+      'section.why': SectionWhy;
+      'section.why-content': SectionWhyContent;
     }
   }
 }

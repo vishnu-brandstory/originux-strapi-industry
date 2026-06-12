@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "industry_pages",
+  "info": {
+    "singularName": "industry-page",
+    "pluralName": "industry-pages",
+    "displayName": "industry pages"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "seo": {
+      "type": "component",
+      "component": "section.seo",
+      "repeatable": false
+    },
+    "banner": {
+      "type": "component",
+      "component": "section.banner",
+      "repeatable": false
+    },
+    "our_approach": {
+      "type": "component",
+      "component": "section.our-approach",
+      "repeatable": false
+    },
+    "Services": {
+      "type": "component",
+      "component": "section.services",
+      "repeatable": false
+    },
+    "Benefits": {
+      "type": "component",
+      "component": "section.benefits",
+      "repeatable": false
+    },
+    "Why": {
+      "type": "component",
+      "component": "section.why",
+      "repeatable": false
+    },
+    "faqs_items": {
+      "type": "component",
+      "component": "section.faqs-items",
+      "repeatable": false
+    },
+    "cta": {
+      "type": "component",
+      "component": "section.cta",
+      "repeatable": false
+    }
+  }
+}

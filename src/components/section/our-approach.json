@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_section_our_approaches",
+  "info": {
+    "displayName": "our-approach"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "approach": {
+      "type": "component",
+      "component": "section.approach",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

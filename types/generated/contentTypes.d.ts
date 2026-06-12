@@ -440,6 +440,43 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiIndustryPageIndustryPage
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'industry_pages';
+  info: {
+    displayName: 'industry pages';
+    pluralName: 'industry-pages';
+    singularName: 'industry-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    banner: Schema.Attribute.Component<'section.banner', false>;
+    Benefits: Schema.Attribute.Component<'section.benefits', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    cta: Schema.Attribute.Component<'section.cta', false>;
+    faqs_items: Schema.Attribute.Component<'section.faqs-items', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::industry-page.industry-page'
+    > &
+      Schema.Attribute.Private;
+    our_approach: Schema.Attribute.Component<'section.our-approach', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'section.seo', false>;
+    Services: Schema.Attribute.Component<'section.services', false>;
+    Title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Why: Schema.Attribute.Component<'section.why', false>;
+  };
+}
+
 export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
   collectionName: 'landing_pages';
   info: {
@@ -1038,6 +1075,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::industry-page.industry-page': ApiIndustryPageIndustryPage;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

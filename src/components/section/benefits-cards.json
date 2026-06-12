@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_section_benefits_cards",
+  "info": {
+    "displayName": "benefits cards"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_section_cta_s",
+  "info": {
+    "displayName": "cta "
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "paragraph": {
+      "type": "blocks"
+    },
+    "button_text": {
+      "type": "string"
+    },
+    "button_url": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
